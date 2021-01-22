@@ -9,7 +9,7 @@ cd lede
 #     git clone https://github.com/tuanqing/luci-app-mentohust
     git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
     git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
-    git clone https://github.com/jerrykuku/luci-app-ttnode
+#    git clone https://github.com/jerrykuku/luci-app-ttnode
     git clone https://github.com/jerrykuku/luci-app-argon-config
     git clone https://github.com/lisaac/luci-lib-docker
     git clone https://github.com/lisaac/luci-app-dockerman
@@ -69,7 +69,7 @@ sed -i '/PKG_SOURCE_VERSION:=/d' package/lean/shadowsocksr-libev/Makefile
 sed -i '/PKG_SOURCE_URL/a PKG_SOURCE_VERSION:=4799b312b8244ec067b8ae9ba4b85c877858976c' \
     package/lean/shadowsocksr-libev/Makefile
 
-# sed -i 's/ipaddr:-"192.168.1.1"/ipaddr:-"192.168.1.10"/' package/base-files/files/bin/config_generate
+sed -i 's/ipaddr:-"192.168.1.1"/ipaddr:-"192.168.100.254"/' package/base-files/files/bin/config_generate
 
 cat >.config <<-EOF
 ## target
@@ -396,7 +396,6 @@ CONFIG_SQLITE3_FTS5=y
 CONFIG_SQLITE3_JSON1=y
 CONFIG_SQLITE3_RTREE=y
 # CONFIG_TARGET_ROOTFS_EXT4FS is not set
-CONFIG_TARGET_ROOTFS_PARTSIZE=640
 CONFIG_TROJAN_GO_COMPRESS_UPX=y
 CONFIG_V2RAY_COMPRESS_GOPROXY=y
 CONFIG_V2RAY_COMPRESS_UPX=y
