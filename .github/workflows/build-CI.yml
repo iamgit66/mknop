@@ -57,7 +57,6 @@ jobs:
             cd ../
             echo "firmware_$x=$filename" >> $GITHUB_ENV
           done
-          cp lede/bin/targets/armvirt/64/openwrt-armvirt-64-default-rootfs.tar.gz out/phicomm-n1/openwrt-armvirt.tar.gz
 
       - name: Upload firmware @ phicomm n1
         uses: actions/upload-artifact@main
