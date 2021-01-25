@@ -9,7 +9,7 @@
 tmp="./tmp"
 out="./out"
 # min root partition size
-minsize=512
+minsize=1024
 
 die() {
     echo -e "${red}e${normal} => $1"
