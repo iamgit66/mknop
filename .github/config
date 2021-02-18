@@ -125,6 +125,6 @@ CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_BRCMFMAC_SDIO=y
 CONFIG_LUCI_LANG_en=y
 EOF
-cp -f ../N1.config ./.config
+
 make defconfig
 cat .config
